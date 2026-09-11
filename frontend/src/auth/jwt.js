@@ -6,7 +6,7 @@ export function decodeJwtPayload(token) {
       atob(base64)
         .split("")
         .map((c) => "%" + c.charCodeAt(0).toString(16).padStart(2, "0"))
-        .join("")
+        .join(""),
     );
     return JSON.parse(json);
   } catch {
@@ -18,3 +18,4 @@ export function isExpired(payload) {
   if (!payload || !payload.exp) return true;
   return Date.now() >= payload.exp * 1000;
 }
+///
