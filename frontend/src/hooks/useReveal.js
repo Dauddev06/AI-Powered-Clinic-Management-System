@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef } from "react";
 //
 // threshold is 0, not a percentage of the target's own area — a percentage
 // threshold requires that fraction of the ELEMENT's own height to be inside
-// the viewport, which silently never fires for a target taller than the
+// the viewport, which silently never fires for a target taller than th
 // viewport itself (a real case here: some content lists render far taller
 // than any screen). rootMargin's -15% still makes the reveal start a little
 // before the element's edge actually reaches the viewport edge
