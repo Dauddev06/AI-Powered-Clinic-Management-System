@@ -13,7 +13,7 @@ import { useCallback, useEffect, useRef } from "react";
 // the viewport, wich silently never fires for a target taller than th
 // viewport itself (a real case here: some content lists render far taller
 // than any screen). rootMargin's -15% still makes the reveal start a little
-// before the element's edge actually reaches the viewport edg
+// before the element's edge actually reaches the viewpo
 export function useReveal() {
   const observerRef = useRef(null);
   if (observerRef.current === null) {
