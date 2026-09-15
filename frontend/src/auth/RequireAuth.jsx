@@ -23,3 +23,4 @@ export default function RequireAuth({ role, children }) {
   return children;
 }
 //i am here to check all things//
+//7th task//
