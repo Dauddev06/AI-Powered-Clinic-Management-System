@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 // truncate cleanly. Prefer a plain CSS media query for anything stylable; reach
 // for this only when the difference is in the JS-rendered content itself.
 export function useMediaQuery(query) {
-  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+  const [matches, setMatches] = useState(
+    () => window.matchMedia(query).matches,
+  );
 
   useEffect(() => {
     const mql = window.matchMedia(query);
@@ -18,3 +20,4 @@ export function useMediaQuery(query) {
 
   return matches;
 }
+//okay
