@@ -26,7 +26,6 @@ export function useReveal() {
       { threshold: 0, rootMargin: "0px 0px -15% 0px" },
     );
   }
-
   useEffect(() => () => observerRef.current?.disconnect(), []);
 
   return useCallback((el) => {
