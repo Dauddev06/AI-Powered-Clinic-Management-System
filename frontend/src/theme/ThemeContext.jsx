@@ -34,10 +34,12 @@ export function ThemeProvider({ children }) {
       isDark: theme === "dark",
       toggleTheme: () => setTheme((t) => (t === "dark" ? "light" : "dark")),
     }),
-    [theme]
+    [theme],
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {
@@ -45,3 +47,4 @@ export function useTheme() {
   if (!ctx) throw new Error("useTheme must be used within ThemeProvider");
   return ctx;
 }
+//theme is not good
