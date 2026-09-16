@@ -24,7 +24,7 @@ export function ThemeProvider({ children }) {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch {
       // Private-browsing/storage-disabled: theme still applies for this
-      // session via the attribute above, it just won't persist across visits.
+      // session via the attribute above, it just won't persist across v
     }
   }, [theme]);
 
