@@ -7,8 +7,7 @@ import { useCallback, useEffect, useRef } from "react";
 // every time an element re-enters the viewport in either scroll direction.
 // prefers-reduced-motion is handled entirely in CSS (the `.reveal` base style
 // is a no-op under that media query), so this hook doesn't need to branch on it.
-//
-// threshold is 0, not a percentage of the target's own area — a percentage
+// threshold is 0, not a percentage of the target's own area — a percentag
 // threshold requires that fraction of the ELEMENT's own height to be inside
 // the viewport, which silently never fires for a target taller than the
 // viewport itself (a real case here: some content lists render far taller
@@ -26,14 +25,12 @@ export function useReveal() {
       { threshold: 0, rootMargin: "0px 0px -15% 0px" },
     );
   }
-
   useEffect(() => () => observerRef.current?.disconnect(), []);
 
   return useCallback((el) => {
     if (el) observerRef.current.observe(el);
   }, []);
 }
-
 // Small per-item stagger for grouped reveals (cards, rows) — capped at 5 so
 // a long list doesn't end up with an oddly long tail delay.
 export function revealDelayClass(i) {
