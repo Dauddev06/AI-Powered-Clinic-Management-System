@@ -26,7 +26,6 @@ export function useReveal() {
     );
   }
   useEffect(() => () => observerRef.current?.disconnect(), []);
-
   return useCallback((el) => {
     if (el) observerRef.current.observe(el);
   }, []);
