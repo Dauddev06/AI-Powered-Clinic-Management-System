@@ -32,7 +32,6 @@ export function useReveal() {
     if (el) observerRef.current.observe(el);
   }, []);
 }
-
 // Small per-item stagger for grouped reveals (cards, rows) — capped at 5 so
 // a long list doesn't end up with an oddly long tail delay.
 export function revealDelayClass(i) {
